@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'https://task-tracker-e823.onrender.com/api'
+  private baseUrl = 'https://task-tracker-e823.onrender.com'
   constructor(private http: HttpClient) { }
 
   register(data: any){
