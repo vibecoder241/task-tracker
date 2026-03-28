@@ -8,7 +8,7 @@ export class TasksService {
 
   constructor(private http: HttpClient) { }
 
-  private baseUrl = 'https://task-tracker-e823.onrender.com/api'
+  private baseUrl = 'https://task-tracker-e823.onrender.com/api/tasks'
 
   getTasks(){
     return this.http.get(this.baseUrl);
