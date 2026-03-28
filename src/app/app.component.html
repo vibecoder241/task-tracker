@@ -1,0 +1,15 @@
+<nav class="p-4 bg-blue-600 text-white flex justify-between">
+  <div class="font-bold">Task Tracker</div>
+
+  <div>
+    <a routerLink="/tasks" class="mr-4 hover:underline">Tasks</a>
+    <a routerLink="/dashboard" class="mr-4 hover:underline">Dashboard</a>
+    <button (click)="logout()" class="bg-red-500 px-3 py-1 rounded">
+      Logout
+    </button>
+  </div>
+</nav>
+
+<div class="p-4">
+  <router-outlet></router-outlet>
+</div>

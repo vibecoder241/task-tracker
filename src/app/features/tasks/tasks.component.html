@@ -1,0 +1,34 @@
+<div class="max-w-xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">Tasks</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div class="flex gap-2 mb-4">
+    <input [(ngModel)]="newTask" placeholder="New task"
+      class="border p-2 flex-1 rounded" />
+
+    <button (click)="addTask()"
+      class="bg-blue-500 text-white px-4 py-2 rounded">
+      Add
+    </button>
+  </div>
+
+  <div *ngFor="let task of tasks"
+       class="flex justify-between items-center p-3 mb-2 bg-gray-100 rounded">
+
+    <span [class.line-through]="task.status === 'completed'">
+      {{ task.title }}
+    </span>
+
+    <div class="flex gap-2">
+      <button (click)="markComplete(task)"
+        class="bg-green-500 text-white px-2 py-1 rounded">
+        ✔
+      </button>
+
+      <button (click)="deleteTask(task._id)"
+        class="bg-red-500 text-white px-2 py-1 rounded">
+        ❌
+      </button>
+    </div>
+  </div>
+</div>
